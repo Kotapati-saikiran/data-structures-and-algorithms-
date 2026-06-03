@@ -1,5 +1,3 @@
-#second largest element in the array
-#-------------------------------------------
 arr = [1,2,4,7,7,5]
 
 smallest = float('inf')  
