@@ -1,13 +1,11 @@
-def sorted_or_not(arr,i):
-    while(arr[i-1] < arr[i] and i <= len(arr)):
-        return True
-        i+=1
-    return False
-    i+=1
-    
-arr=[1,2,3,4,5]
-i=1
-res=sorted_or_not(arr,i)
+def sorted_or_not(arr):
+    for i in range(1, len(arr)):
+        if arr[i - 1] > arr[i]:
+            return False
+    return True
+
+arr = [1, 2, 3, 4, 5]
+res = sorted_or_not(arr)
 print(res)
 
 #----------------------------------------
