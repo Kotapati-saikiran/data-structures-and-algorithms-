@@ -41,3 +41,7 @@ if sign == "+":
 else:
     result -= num
 print(result)
+
+"""Pattern: Expression Parsing + Context Management
+Core Observation: Process a number as soon as it is finished. Parentheses don't perform arithmetic—they create and close calculation contexts.
+Reusable Idea: Separate variable responsibilities (num, result, sign, stack). Save context before entering nested work and restore it when that work finishes."""
