@@ -4,7 +4,10 @@ def search(nums, target):
     while l <= h:
         mid = (l + h) // 2
         if nums[mid] == target:
-            return mid
+            return True
+        if nums[l] == nums[mid]:
+            l += 1
+            continue
         if nums[l] <= nums[mid]:
             if nums[l] <= target and target <= nums[mid]:
                 h = mid - 1
@@ -15,7 +18,7 @@ def search(nums, target):
                 l = mid + 1
             else:
                 h = mid - 1
-    return -1
-nums = [4,5,6,7,0,1,2]
+    return False
+nums = [1,0,1,1,1]
 target = 0
 print(search(nums, target))
