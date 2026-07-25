@@ -1,3 +1,4 @@
+#this is not using binary search.
 def search(nums1, nums2):
     merged = sorted(nums1 + nums2)
     mid = len(merged) // 2
