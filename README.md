@@ -1,4 +1,5 @@
 Data Structures & Algorithms
+--------------------------------
 
 This is my personal **Data Structures & Algorithms (DSA) practice repository**, where I regularly solve and organize problems from different coding platforms and DSA sheets.
 
