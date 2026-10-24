@@ -217,3 +217,31 @@ nums = [1, 3, -1, -3, 5, 3, 6, 7]
 k = 3
 print(medianSlidingWindow(nums, k))
 # [1.0, -1.0, -1.0, 3.0, 5.0, 6.0]
+
+
+#-----------------------------------------------------------------------------
+"""from bisect import bisect_left, insort
+
+def medianSlidingWindow(nums, k):
+    window = sorted(nums[:k])
+    result = []
+
+    for i in range(k, len(nums) + 1):
+        # read the median
+        if k % 2 == 1:
+            result.append(float(window[k // 2]))
+        else:
+            result.append((window[k // 2 - 1] + window[k // 2]) / 2)
+
+        if i == len(nums):
+            break
+
+        # slide: remove the old element, insert the new one
+        del window[bisect_left(window, nums[i - k])]
+        insort(window, nums[i])
+
+    return result
+
+nums = [1, 3, -1, -3, 5, 3, 6, 7]
+k = 3
+print(medianSlidingWindow(nums, k))"""
